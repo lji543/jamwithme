@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
 
 function App() {
+  const CLIENT_ID = '<YOUR_CLIENT_ID>';
+  const API_KEY = '<YOUR_API_KEY>';
+
+  let DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
+  let SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button id="authorize_button">Authorize</button>
+      <button id="signout_button">Sign Out</button>
+
+
     </div>
   );
 }
